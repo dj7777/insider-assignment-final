@@ -1,0 +1,26 @@
+{
+  "name": "insider-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "6.5.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "flickrapi": "^0.6.0",
+    "gm": "^1.23.0",
+    "image-size": "^0.6.1",
+    "imgur": "^0.2.1",
+    "multer": "^1.3.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}
