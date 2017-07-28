@@ -1,1 +1,37 @@
-<img src="1.png"/>
+ <script src="js/jquery-3.2.1.js"></script>
+          
+<script>
+/* $.getJSON('/images').done(function(data){
+        console.log(data);
+   });*/
+/*$.ajax({
+  url: '/images',
+  complete: function(data) {
+    console.log(data);
+   // console.log(data.data[0]);
+   // console.log(data.data.images[1]);
+  }
+});
+*/
+
+
+ $.ajax({
+    url: '/images',
+    type: "GET",
+    dataType: "json",
+    success: function(data) {
+        console.log('success');
+        console.log(data);
+        //var day = data.data[0][0] // get data value from json
+       // $("#Day").val(day);
+    },
+    error:function(xhr,error)
+              {
+                 console.log(xhr.status+" "+xhr.statusText+ "res="+xhr.responseText);
+           //      for(var i=0;i<)
+              }
+
+});    
+
+
+</script>
