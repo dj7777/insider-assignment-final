@@ -8,41 +8,37 @@ body {
 
 #previewCont{
   border: solid black 5px;
+  }
+#imgBtnCont{
+  display: inline-block;
 }
 .preview{
-    display: inline-block;
-    margin:9px;
-    border: solid 4px black;
-
+    margin:9px;  
 }
 #dvPreview755
 {
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
     height: 755px;
     width: 450px;
-    display: none;
-}
+ }
 
 #dvPreview365
 {
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
     height: 365px;
     width: 450px;
-    display: none;
-}
+ }
 
 #dvPreview212
 {
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
     height: 365px;
     width: 212px;
-    display: none;
-}
+ }
 
 #dvPreview380
 {
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
     height: 380px;
     width: 380px;
-    display: none;
-}
+ }

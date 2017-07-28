@@ -30,7 +30,8 @@ $("#photoInput").change(function (e) {
 });
 
 */
-$(function () {
+$(document).ready(function() {
+    $("#previewCont").hide();
     $("#photoInput").change(function () {
          $("#dvPreview755").html("");
          $("#dvPreview365").html("");

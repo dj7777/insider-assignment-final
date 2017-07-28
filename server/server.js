@@ -4,7 +4,6 @@ var imgur = require('imgur');
 
 const url = require('url');
 
-
 const express = require('express');
  var multer = require('multer');
  var bodyParser = require('body-parser');
@@ -54,13 +53,24 @@ app.get("/", function(req, res) {
      res.sendFile(publicPath+ "/images.html");
  });
 */
+
+app.post("/api/Upload755", function(req, res) {
+     upload(req, res, function(err) {
+         if (err) {
+             return res.end("Something went wrong!");
+         }
+
+         
+     })
+
+
  app.post("/api/Upload", function(req, res) {
      upload(req, res, function(err) {
          if (err) {
              return res.end("Something went wrong!");
          }
             
-
+/*
           var resizefile1=  gm(req.files[0].path)
             .resizeExact(755, 450);
 
@@ -76,7 +86,7 @@ app.get("/", function(req, res) {
            var resizefile4= gm('images/'+req.files[0].filename)
             .resizeExact(380, 380);
 
-          // uploading single photo
+*/          // uploading single photo
         /*    imgur.uploadFile(resizefile1.source)
             .then(function (json) {
                 console.log(json.data.link);
@@ -99,8 +109,7 @@ app.get("/", function(req, res) {
             .resizeExact(755, 450)
             .write('public/images/'+req.files[0].fieldname + "_" + Date.now()+"_1" + "_" + req.files[0].originalname, function (err) {
             if (!err){
-                console.log('done');
-               
+                console.log('done');    
                 } 
            else console.log(err);
         });
@@ -168,10 +177,7 @@ function readFilesName(){
       //  console.log(json);
        var imageLists = '';
             for (var i=0; i<json.data.images_count; i++) {
-               // console.log('hello');
-             //   imageLists += '<li><a href="/?image=' + files[i] + '">' + files[i] + '</li>';
-                imageLists += '<img height="200px" width="200px" src="' + json.data.images[i].link +  '"/>';
-        
+                imageLists += '<img height="200px" width="200px" src="' + json.data.images[i].link +  '"/>';        
             }
             imageLists += '';
             res.writeHead(200, {'Content-type':'text/html'});
@@ -195,10 +201,3 @@ function readFilesName(){
     // console.log(jsonRes);
   //res.json({ data: jsonRes });
 });
-
-
-/*server.listen(port, () =>{
-    console.log(`Server is up on port ${port}`);
-    
-});*/
-//console.log(temp);
